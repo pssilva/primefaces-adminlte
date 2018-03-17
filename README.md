@@ -40,48 +40,48 @@ Considerando que temos uma instância do Amazon Machine Image - AMI iniciada: [a
 5. Install o theme no seu projeto:
     1. adicionar a dependência POM: 
      
-```
-<dependency>
-	<groupId>br.com.primefaces.adminlte</groupId>
-	<artifactId>primefaces-adminlte</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
- </dependency>
-	 
-```	 
+	```
+	<dependency>
+		<groupId>br.com.primefaces.adminlte</groupId>
+		<artifactId>primefaces-adminlte</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	 </dependency>
+		 
+	```	 
 
    2. adicionar o theme no seu WEB-INF/web.xml:
    
-```
-<context-param>
-	<param-name>primefaces.THEME</param-name>
-	<param-value>adminlte</param-value>
-</context-param>
-	 
-```	 
+	```
+	<context-param>
+		<param-name>primefaces.THEME</param-name>
+		<param-value>adminlte</param-value>
+	</context-param>
+		 
+	```	 
    3. adicionar o CSS do template na usa página:
    
-```
-<h:head>
-    <title>
-    	<ui:insert name="title"> 
-        	Sua Página JSF :: Usando o Thema AdminLTE
-    	</ui:insert>
-    </title>
-    <f:facet name="first">
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <meta http-equiv="pragma" content="no-cache"/>
-        <meta http-equiv="cache-control" content="no-cache"/>
-        <meta http-equiv="expires" content="0"/>
-    </f:facet>
-    
-    <link rel="stylesheet"  id="AdminLTE_CSS"
-		href="#{resource['primefaces-adminlte:dist/css/AdminLTE.css']}" 
-        type="text/css" media="all" />
-    <ui:insert name="head"/>
-    
-</h:head>
-	 
-```	 
+	```
+	<h:head>
+	    <title>
+	    	<ui:insert name="title"> 
+	        	Sua Página JSF :: Usando o Thema AdminLTE
+	    	</ui:insert>
+	    </title>
+	    <f:facet name="first">
+	        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	        <meta http-equiv="pragma" content="no-cache"/>
+	        <meta http-equiv="cache-control" content="no-cache"/>
+	        <meta http-equiv="expires" content="0"/>
+	    </f:facet>
+	    
+	    <link rel="stylesheet"  id="AdminLTE_CSS"
+			href="#{resource['primefaces-adminlte:dist/css/AdminLTE.css']}" 
+	        type="text/css" media="all" />
+	    <ui:insert name="head"/>
+	    
+	</h:head>
+		 
+	```	 
 
 6. acessar alguns dos seguintes links: 
     1. `http://localhost:8080/ap-web/primefaces-adminlte/`;

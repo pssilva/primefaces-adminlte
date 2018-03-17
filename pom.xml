@@ -1,0 +1,123 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+	<!-- <parent>
+	    <groupId>org.sonatype.oss</groupId>
+	    <artifactId>oss-parent</artifactId>
+	    <version>9</version>
+	    <relativePath />
+	</parent> -->
+  <groupId>br.com.primefaces.adminlte</groupId>
+  <artifactId>primefaces-adminlte</artifactId>
+  <url>https://github.com/pssilva/primefaces-adminlte</url>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>Theme Primefaces AdminLTE</name>
+	<description>
+	    A PrimeFaces theme based on Bootstrap and AdminLTE. Para o processo seletivo da empresa Cabtec.
+	</description>
+	
+  <dependencies>
+  
+   <!-- https://mvnrepository.com/artifact/org.primefaces/primefaces -->
+	<dependency>
+	    <groupId>org.primefaces</groupId>
+	    <artifactId>primefaces</artifactId>
+	    <version>6.2</version>
+	</dependency>
+	<dependency>
+	  <groupId>org.primefaces.extensions</groupId>
+	  <artifactId>primefaces-extensions</artifactId>
+	    <version>6.2</version>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/javax.faces/jsf-api -->
+	<dependency>
+	    <groupId>javax.faces</groupId>
+	    <artifactId>jsf-api</artifactId>
+	    <version>2.1</version>
+	    <scope>provided</scope>
+	</dependency>
+	
+	<!-- <dependency>
+	     <groupId>org.primefaces.themes</groupId>
+	     <artifactId>cupertino</artifactId>
+	     <version>1.0.10</version>
+	</dependency> -->
+	<!-- https://mvnrepository.com/artifact/javax.ejb/javax.ejb-api -->
+	<dependency>
+	    <groupId>javax.ejb</groupId>
+	    <artifactId>javax.ejb-api</artifactId>
+	    <version>3.2</version>
+	</dependency>
+		
+  </dependencies>
+
+    <developers>
+        <developer>
+            <name>Paulo Sérgio da Silva</name>
+            <email>pss1suporte@gmail.com</email>
+        </developer>
+    </developers>
+
+    <licenses>
+        <license>
+            <name>The MIT License (MIT)</name>
+            <url>https://opensource.org/licenses/MIT</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+    <scm>
+        <connection>scm:git:https://github.com/pssilva/primefaces-adminlte.git</connection>
+        <developerConnection>scm:git:git@github.com:pssilva/primefaces-adminlte.git</developerConnection>
+        <url>https://github.com/pssilva/primefaces-adminlte.git</url>
+    </scm>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <compressCss>true</compressCss>
+        <themeFile>theme.css</themeFile>
+    </properties>
+
+    <build>
+        <finalName>primefaces-adminlte</finalName>
+
+        <resources>
+            <resource>
+                <!-- <directory>src/main/META-INF</directory> -->
+                <directory>src/main/resources</directory>
+                <!-- <directory>META-INF</directory> -->
+
+                <filtering>true</filtering>
+                <!-- -->
+                <includes>
+                    <include>**/theme.css</include>
+                    <include>**/primefaces-adminlte.properties</include>
+                    <include>**/*.properties</include>
+                    <include>**/*.xhtml</include>
+                    <include>**/*.html</include>
+                    <include>**/*.txt</include>
+                    <include>**/*.json</include>
+                    <include>**/primefaces-adminlte/images/*</include>
+                    <include>**/js/*</include>
+                    <include>**/dist/**</include>
+                    <include>**/bootstrap/**</include>
+                    <include>**/css/**</include>
+                    <include>**/img/*</include>
+                    <include>**/plugins/**</include>
+                    <include>**/plugins/js/**</include>
+                    <include>**/images/*</include>
+                    <include>**/fonts/*</include>
+                </includes> 
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    
+</project>

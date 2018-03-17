@@ -1,0 +1,310 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" 
+    xmlns:h="http://java.sun.com/jsf/html" 
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:ui="http://java.sun.com/jsf/facelets" >
+
+<h:head>
+    <title>
+        <ui:insert name="title"> 
+            :: Admin Template ::
+        </ui:insert>
+    </title>
+    
+    <link rel="stylesheet" href="#{resource['primefaces-cabtec:css/style.css']}" 
+          type="text/css" media="all" />
+    <link rel="stylesheet" href="#{resource['primefaces-cabtec:css/styles.css']}" 
+          type="text/css" media="all" />
+          
+    <link rel="stylesheet" href="#{resource['primefaces-cabtec:css/custom-fe2275261f.css']}" 
+          type="text/css" media="all" />
+    <link rel="stylesheet" href="#{resource['primefaces-cabtec:css/media-fe2275261f.css']}" 
+          type="text/css" media="all" />
+          
+    <link rel="stylesheet" href="#{resource['primefaces-cabtec:css/main.min.css?ver=4.2.2']}" 
+          type="text/css" media="all" />
+          
+    
+          
+    <h:outputStylesheet name="webjars/font-awesome/4.2.0/css/font-awesome.css" width="123" height="40" sizes="123px" alt="Cabtec" />
+    
+
+    <script async="" src="#{resource['primefaces-cabtec:js/analytics.js']}"></script>
+
+    <!-- <script type="text/javascript" async="" src="#{resource['primefaces-cabtec:js/7aabb74f-8f7b-44e3-9c3b-1841013b1253.js']}"></script> -->
+
+    <h:outputScript  target="body">
+        /* <![CDATA[ */
+        function createCookie(a,d,b){
+            if(b){var c=new Date;c.setTime(c.getTime()+864E5*b);b="; expires="+c.toGMTString()}else b="";document.cookie=a+"="+d+b+"; path=/"
+        }
+
+        function readCookie(a){a+="=";for(var d=document.cookie.split(";"),b=0;b<d.length;b++){for(var c=d[b];" "==c.charAt(0);)c=c.substring(1,c.length);if(0==c.indexOf(a))return c.substring(a.length,c.length)}return null}function eraseCookie(a){createCookie(a,"",-1)}
+
+        function areCookiesEnabled(){var a=!1;createCookie("testing","Hello",1);null!=readCookie("testing")&&(a=!0,eraseCookie("testing"));return a}(function(a){var d=readCookie("devicePixelRatio"),b=void 0===a.devicePixelRatio?1:a.devicePixelRatio;areCookiesEnabled()&&null==d&&(createCookie("devicePixelRatio",b,7),1!=b&&a.location.reload(!0))})(window);
+        /* ]]> */
+    </h:outputScript>
+    
+    <link rel="dns-prefetch" href="http://fonts.googleapis.com/" />
+    <link rel="dns-prefetch" href="http://s.w.org/" />
+    <link rel="alternate" type="application/rss+xml" title="Feed para Cabtec »" href="http://cabtec.com.br/feed/" />
+    <link rel="alternate" type="application/rss+xml" title="Feed de comentários para Cabtec »" href="http://cabtec.com.br/comments/feed/" />
+    
+   <h:outputScript  target="body">
+        /* <![CDATA[ */
+            window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/cabtec.com.br\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.8.5"}};
+            !function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,56826,8203,55356,56819),0,0),c=j.toDataURL(),b!==c&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55358,56794,8205,9794,65039),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55358,56794,8203,9794,65039),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+    /* ]]> */
+</h:outputScript>
+    
+    <script src="#{resource['primefaces-cabtec:js/wp-emoji-release.min.js']}" type="text/javascript" defer=""></script>
+
+    <style type="text/css">
+        .message { 
+            text-align: left;
+            letter-spacing:5px;
+            color:#000099
+          }
+        .message-overline { 
+            text-decoration:overline;
+          }
+        .message-font { 
+            font-family:georgia,garamond,serif;
+            font-size:20px;
+            font-style:italic;
+        } 
+    </style>
+
+</h:head>
+
+
+<h:body class="home page-template-default page page-id-1249 slideshow-on disabled-hover-icons overlay-cursor-on srcset-enabled btn-flat custom-btn-color custom-btn-hover-color contact-form-material accent-bullets bold-icons phantom-fade phantom-shadow-decoration phantom-custom-logo-on sticky-mobile-header mobile-hide-footer top-header first-switch-logo-left first-switch-menu-right second-switch-logo-left second-switch-menu-right right-mobile-menu layzr-loading-on wpb-js-composer js-comp-ver-5.0.1 vc_responsive outlined-portfolio-icons is-webkit no-mobile closed-overlay-mobile-header phantom-off" >
+        
+        <h:outputText styleClass="message"
+          value="This text is CSS formated by 'message' class!"/>
+        <br /><br />
+        <h:outputText styleClass="message message-overline"
+                      value="This text is CSS formated by 'message' and
+                               'message-overline' classes!"/>
+        <br /><br />
+        <h:outputText styleClass="message message-overline message-font"
+                      value="This text is CSS formated by 'message',
+                        'message-overline' and 'message-font' classes!"/>
+        <br /><br />
+        <h:outputText style="text-align: left;letter-spacing:5px;
+                      color:#000099" value="This text is CSS formated
+               using the 'style' attribute instead of 'message' class!"/>
+        <br /><br />
+        <h:outputText style="text-align: left;letter-spacing:5px;
+                      color:#000099;text-decoration:overline;"
+                      value="This text is CSS formated using the
+                            'style' attribute instead of 'message'
+                            and 'message-overline' classes!"/>
+        <br /><br />
+        <h:outputText style="text-align: left;letter-spacing:5px; color:#000099; text-decoration:overline; font-family:georgia,garamond,serif; font-size:20px;font-style:italic;" 
+                    value="This text is CSS formated using the 'style' attribute instead of 'message', 'message-overline' and 'message-font' classes!"/>
+        <br /><br />
+
+
+    <div id="page" class="closed-mobile-header">
+
+        <div id="header">
+            <img src="#{resource['primefaces-cabtec:images/logo-vertical-cabtec-44x162-1.png']}" />
+            <p:commandButton value="Area Chart" icon="fa fa-area-chart" style="margin-right:10px;" />
+            <hr />
+        </div>
+        <div class="masthead inline-header center widgets shadow-decoration dt-parent-menu-clickable show-device-logo show-mobile-logo" role="banner" style="transform: translateY(0px);"> 
+            <header class="header-bar">
+                
+                <ul id="primary-menu" class="main-nav" role="menu">
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-1249 current_page_item menu-item-2683 act first">
+                    <a href="http://cabtec.com.br/" data-level="1">
+                        <span class="menu-item-text">
+                            <span class="menu-text">HOME</span>
+                        </span>
+                    </a>
+                    </li> 
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2711 has-children">
+                    <a href="http://cabtec.com.br/produtos/" data-level="1">
+                        <span class="menu-item-text">
+                            <span class="menu-text">PRODUTOS</span>
+                        </span></a>
+                        <i class="next-level-button"></i>
+                        <ul class="sub-nav level-arrows-on" style="left: 0px; opacity: 0; visibility: hidden;">
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2704 first">
+                                <a href="http://cabtec.com.br/leitores/" data-level="2">
+                                    <span class="menu-item-text">
+                                        <span class="menu-text">LEITORES</span>
+                                    </span>
+                                </a>
+                            </li> 
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2703">
+                                <a href="http://cabtec.com.br/coletores/" data-level="2">
+                                    <span class="menu-item-text">
+                                        <span class="menu-text">COLETORES</span>
+                                    </span>
+                                </a>
+                            </li> 
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2705">
+                                <a href="http://cabtec.com.br/impressoras/" data-level="2">
+                                    <span class="menu-item-text">
+                                        <span class="menu-text">IMPRESSORAS</span>
+                                    </span>
+                                </a>
+                            </li> 
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2701">
+                                <a href="http://cabtec.com.br/ribbons/" data-level="2">
+                                    <span class="menu-item-text">
+                                        <span class="menu-text">RIBBONS</span>
+                                    </span>
+                                </a>
+                            </li> 
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2702">
+                                <a href="http://cabtec.com.br/etiquetas/" data-level="2">
+                                    <span class="menu-item-text">
+                                        <span class="menu-text">ETIQUETAS</span>
+                                    </span>
+                                </a>
+                            </li> 
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2699">
+                                <a href="http://cabtec.com.br/produtos-rfid/" data-level="2">
+                                    <span class="menu-item-text">
+                                        <span class="menu-text">RFID</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2689">
+                                <a href="http://cabtec.com.br/servicos/" data-level="2">
+                                    <span class="menu-item-text">
+                                        <span class="menu-text">SERVIÇOS</span>
+                                    </span>
+                                </a>
+                            </li> 
+                        </ul>
+                    </li> 
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2712">
+                        <a href="http://cabtec.com.br/servicos/" data-level="1">
+                            <span class="menu-item-text">
+                                <span class="menu-text">SERVIÇOS</span>
+                            </span>
+                        </a>
+                    </li> 
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2688 has-children">
+                        <a href="http://cabtec.com.br/software/" data-level="1">
+                            <span class="menu-item-text">
+                                <span class="menu-text">SOFTWARE</span>
+                            </span>
+                        </a>
+                        <i class="next-level-button"></i>
+                        <ul class="sub-nav level-arrows-on">
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2687 first">
+                                <a href="http://cabtec.com.br/gti-frota/" data-level="2">
+                                    <span class="menu-item-text">
+                                        <span class="menu-text">GTI FROTA</span>
+                                    </span>
+                                </a>
+                            </li> 
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2685">
+                                <a href="http://cabtec.com.br/gti-plug/" data-level="2">
+                                    <span class="menu-item-text">
+                                        <span class="menu-text">GTI PLUG</span>
+                                    </span>
+                                </a>
+                            </li> 
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2686">
+                                <a href="http://cabtec.com.br/gti-mid/" data-level="2">
+                                    <span class="menu-item-text">
+                                        <span class="menu-text">GTI MID</span>
+                                    </span>
+                                </a>
+                            </li> 
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2695">
+                                <a href="http://cabtec.com.br/gti-sgl/" data-level="2">
+                                    <span class="menu-item-text">
+                                        <span class="menu-text">GTI SGL</span>
+                                    </span>
+                                </a>
+                            </li> 
+                        </ul>
+                    </li> 
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2690">
+                        <a href="http://cabtec.com.br/rfdi/" data-level="1">
+                            <span class="menu-item-text">
+                                <span class="menu-text">RFID</span>
+                            </span>
+                        </a>
+                    </li> 
+                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2657">
+                        <a href="http://viewbooster360.com/en-US/" data-level="1">
+                            <span class="menu-item-text">
+                                <span class="menu-text">VIEWBOOSTER</span>
+                            </span>
+                        </a>
+                    </li> 
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2684">
+                        <a href="http://cabtec.com.br/blog/" data-level="1">
+                            <span class="menu-item-text">
+                                <span class="menu-text">BLOG</span>
+                            </span>
+                        </a>
+                    </li> 
+                </ul>
+            </header>
+
+        </div>
+        <ui:insert name="corpo-da-pagina"> 
+            <p>Espaço para o conteúdo da tela</p> 
+        </ui:insert>
+    
+        <div id="footer" style="text-align: center">
+            <hr />
+            &copy; 2010 K19. Todos os direitos reservados.
+        </div>
+    </div><!-- fecha id="page"  --> 
+
+    <h:outputScript  target="body">
+        /* <![CDATA[ */
+            function revslider_showDoubleJqueryError(sliderID) {
+                var errorMessage = "Revolution Slider Error: You have some jquery.js library include that comes after the revolution files js include.";
+                errorMessage += "<br> This includes make eliminates the revolution slider libraries, and make it not work.";
+                errorMessage += "<br><br> To fix it you can:<br>&nbsp;&nbsp;&nbsp; 1. In the Slider Settings -> Troubleshooting set option:  <strong><b>Put JS Includes To Body</b></strong> option to true.";
+                errorMessage += "<br>&nbsp;&nbsp;&nbsp; 2. Find the double jquery.js include and remove it.";
+                errorMessage = "<span style='font-size:16px;color:#BC0C06;'>" + errorMessage + "</span>";
+                    jQuery(sliderID).show().html(errorMessage);
+            }
+     /* ]]> */
+</h:outputScript>
+    
+    <h:outputScript  target="body">
+        /* <![CDATA[ */
+            function revslider_showDoubleJqueryError(sliderID) {
+                var errorMessage = "Revolution Slider Error: You have some jquery.js library include that comes after the revolution files js include.";
+                errorMessage += "<br> This includes make eliminates the revolution slider libraries, and make it not work.";
+                errorMessage += "<br><br> To fix it you can:<br>&nbsp;&nbsp;&nbsp; 1. In the Slider Settings -> Troubleshooting set option:  <strong><b>Put JS Includes To Body</b></strong> option to true.";
+                errorMessage += "<br>&nbsp;&nbsp;&nbsp; 2. Find the double jquery.js include and remove it.";
+                errorMessage = "<span style='font-size:16px;color:#BC0C06;'>" + errorMessage + "</span>";
+                    jQuery(sliderID).show().html(errorMessage);
+            }
+    /* ]]> */
+</h:outputScript>
+
+    <!-- <script type="text/javascript" src="#{resource['primefaces-cabtec:js/main.min.js']}"></script> -->
+
+    
+    <h:outputScript  target="body">
+        /* <![CDATA[ */
+            var wpcf7 = {"apiSettings":{"root":"http:\/\/cabtec.com.br\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"},"recaptcha":{"messages":{"empty":"Verifique se voc\u00ea n\u00e3o \u00e9 um rob\u00f4."}}};
+    /* ]]> */
+</h:outputScript>
+
+    <script type="text/javascript" src="#{resource['primefaces-cabtec:js/scripts.js']}"></script>
+    <script type="text/javascript" src="#{resource['primefaces-cabtec:js/post-type.js']}"></script>
+    <script type="text/javascript" src="#{resource['primefaces-cabtec:js/wp-embed.min.js']}"></script>
+    <script type="text/javascript" src="#{resource['primefaces-cabtec:js/js_composer_front.min.js']}"></script>
+
+
+
+</h:body>
+</html>
+

@@ -1,0 +1,19 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:f="http://java.sun.com/jsf/core"
+     xmlns:h="http://java.sun.com/jsf/html"
+     xmlns:ui="http://java.sun.com/jsf/facelets"
+     xmlns:p="http://primefaces.org/ui">
+                
+	<p:layoutUnit position="center">
+         <ui:insert name="content">Put default content here, if any.</ui:insert>
+         <h:form id="formulario-login" >
+             <h:panelGrid columns="2">
+                 <h:outputLabel value="Usuário: " for="campo-usuario" />
+                 <h:inputText value="#{autenticadorBean.usuario}" id="campo-usuario" />
+                 <h:outputLabel value="Senha: " for="campo-senha" />
+                 <h:inputSecret value="#{autenticadorBean.senha}" id="campo-senha" /> 
+             </h:panelGrid>
+             <h:commandButton value="Entrar" action="#{autenticadorBean.autentica}"/> 
+         </h:form>
+     </p:layoutUnit>
+</ui:composition>

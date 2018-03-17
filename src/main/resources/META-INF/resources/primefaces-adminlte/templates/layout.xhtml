@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en"
+     xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:f="http://java.sun.com/jsf/core"
+     xmlns:h="http://java.sun.com/jsf/html"
+     xmlns:ui="http://java.sun.com/jsf/facelets"
+     xmlns:p="http://primefaces.org/ui"
+>
+    <h:head>
+        <title>
+        	<ui:insert name="title"> 
+            	:: Layout Template :: Primefaces AdminLTE
+        	</ui:insert>
+        </title>
+        <f:facet name="first">
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+            <meta http-equiv="pragma" content="no-cache"/>
+            <meta http-equiv="cache-control" content="no-cache"/>
+            <meta http-equiv="expires" content="0"/>
+        </f:facet>
+        <link rel="stylesheet"  id="AdminLTE_CSS"
+			href="#{resource['primefaces-adminlte:dist/css/AdminLTE.css']}" 
+            type="text/css" media="all" />
+        <ui:insert name="head"/>
+    </h:head>
+    <h:body>
+        <p:layout fullPage="true">
+        	<ui:include src="/primefaces-adminlte/view/layouts/UiLayoutNorth.xhtml" />
+            <ui:include src="/primefaces-adminlte/view/layouts/UiLayoutSouth.xhtml" />
+            <ui:include src="/primefaces-adminlte/view/layouts/UiLayoutLeft.xhtml" />
+            <!-- <ui:include src="/primefaces-adminlte/view/layouts/UiLayoutRight.xhtml" /> -->
+            <ui:insert name="content-center">
+            	<p>Conteúdo do Centro</p>
+            </ui:insert>
+            <ui:insert name="appResources"/>
+        </p:layout>
+    </h:body>
+</html>

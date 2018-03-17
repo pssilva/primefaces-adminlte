@@ -1,0 +1,99 @@
+Teste para desenvolvedor Java Pleno (foco em JSF)
+ 
+Desenvolver um aplicativo para cadastro de agenda de contatos e anotação de recados.
+
+O sistema será utilizado pela recepcionista da empresa, que lancará os recados, e pelos demais funcionários para consultar os seus respectivos recados, podendo lançar recados para outros contatos também.
+
+Requisitos
+
+Possuir tela de login;
+A senha deve ser criptografada com SHA-256.
+
+Possuir cadastro de contatos
+Tela de pesquisa com filtro por: login, nome, ramal, email.
+
+Possuir tela para registrar os recados
+Deve apresentar um diálogo para pesquisar e selecionar o contato;
+
+Possuir tela para o usuário consultar e gerenciar seus recados
+Os recados só podem ser visualizados pelo contato destino do recado e por quem fez o cadastro; 
+Tela de pesquisa com filtro por: quem, data (período), se é para recuperar apenas os não lidos ou todos; 
+
+Opção de gerar um relatório de recados, em PDF, listando: horário, quem, primeiros 100 caracteres do recado.
+O aplicativo deve marcar automaticamente um recado como lido após o usuário visualizá-lo;
+O usuário pode marcar um recado como não lido;
+O aplicativo deve apagar os recados lidos com mais de 2 horas de idade (verificar de hora em hora)
+Emitir log INFO informando quantos registros foram removidos.
+
+Na página home: 
+Listar os cinco contatos com recados mais antigos
+Apresentar o total de recados do dia;
+Todas as telas de pesquisa devem possuir formulário de filtro para as consultas;
+A aplicação deve ser internacionalizável;
+
+Todos os registros devem ter atualizados as colunas de auditoria conforme abaixo: 
+gti_created_at e gti_created_by = registro novo 
+gti_modified_at e gti_modified_by = registro novo e alterações
+Tecnologias obrigatórias
+
+Java 7
+CDI
+EJB 3   
+JSF 2
+PrimeFaces 4
+JPA 2
+Hibernate 4.2.12.Final
+SLF4J com Log4j2
+Flyway - veja: https://flywaydb.org/getstarted/firststeps/gradle
+MySQL 5.6
+Jasper Reports 5.5.0 (JasperSoft Studio 5.5.0.final)
+Gradle
+Servidor de aplicação
+
+TomEE, dipsonível no link abaixo:
+
+https://www.dropbox.com/s/7uph1nellwqr94c/tomee-jaxrs-1.7.2-prova.zip?dl=0
+Tabelas
+
+CREATE TABLE contatos ( 
+    id                      INTEGER      NOT NULL AUTO_INCREMENT,
+    login                   VARCHAR(140) NOT NULL,
+    senha                   VARCHAR(255) NOT NULL,
+    nome                    VARCHAR(140) NOT NULL,
+    ramal                   INTEGER      NOT NULL,
+    email                   VARCHAR(255) NULL,
+    gti_created_at          DATETIME     NOT NULL,
+    gti_created_by          VARCHAR(140) NOT NULL,
+    gti_modified_at         DATETIME     NOT NULL,
+    gti_modified_by         VARCHAR(140) NOT NULL,
+    gti_version             INTEGER      NOT NULL DEFAULT 0,
+    INDEX IDX_contatos_nome (nome),
+    INDEX IDX_contatos_ramal (ramal),
+    PRIMARY KEY(id)
+);
+ 
+CREATE TABLE recados ( 
+    id              INTEGER      NOT NULL AUTO_INCREMENT,
+    idContato       INTEGER      NOT NULL,
+    horario         TIMESTAMP    NOT NULL,
+    quem            VARCHAR(140) NOT NULL COMMENT 'Quem deixou o recado',
+    texto           VARCHAR(255) NOT NULL,
+    indLido         TINYINT(1)   NOT NULL DEFAULT 0,
+    gti_created_at  DATETIME     NOT NULL,
+    gti_created_by  VARCHAR(140) NOT NULL,
+    gti_modified_at DATETIME     NOT NULL,
+    gti_modified_by VARCHAR(140) NOT NULL,
+    gti_version     INTEGER      NOT NULL DEFAULT 0,
+    INDEX IDX_recados_horario (idContato, horario DESC),
+    INDEX FK_recados_contatos (idContato),
+    CONSTRAINT FK_recados_contatos 
+        FOREIGN KEY (idContato) REFERENCES contatos (id),
+    PRIMARY KEY(id)
+);
+
+
+
+
+
+
+

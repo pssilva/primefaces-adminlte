@@ -32,13 +32,13 @@ Considerando que temos uma instância do Amazon Machine Image - AMI iniciada: [a
 1. Clonar o projeto: `git clone https://github.com/pssilva/primefaces-adminlte.git`;
 2. Acessar a pasta: `cd primefaces-adminlte`;
 3. Instalar as dependências do AdminLTE: 
-    a. Acessar: `cd src/main/resources/META-INF/resources/primefaces-adminlte`;
-    b. composer: `composer install`;
-    c. Node: `npm install admin-lte --save`;
-    d. brew: `bower install admin-lte`;
+    1. Acessar: `cd src/main/resources/META-INF/resources/primefaces-adminlte`;
+    2. composer: `composer install`;
+    3. Node: `npm install admin-lte --save`;
+    4. brew: `bower install admin-lte`;
 4. Maven na pasta do projeto `primefaces-adminlte`:  `mvn clean package`;
 5. Install o theme no seu projeto:
-    a. adicionar a dependência POM:
+    1. adicionar a dependência POM: 
      
 ```
 <dependency>
@@ -48,8 +48,8 @@ Considerando que temos uma instância do Amazon Machine Image - AMI iniciada: [a
  </dependency>
 	 
 ```	 
-	
-   b. adicionar o theme no seu WEB-INF/web.xml:
+
+   2. adicionar o theme no seu WEB-INF/web.xml:
    
 ```
 <context-param>
@@ -58,8 +58,7 @@ Considerando que temos uma instância do Amazon Machine Image - AMI iniciada: [a
 </context-param>
 	 
 ```	 
-
-   c. adicionar o CSS do template na usa página:
+   3. adicionar o CSS do template na usa página:
    
 ```
 <h:head>
@@ -85,8 +84,8 @@ Considerando que temos uma instância do Amazon Machine Image - AMI iniciada: [a
 ```	 
 
 6. acessar alguns dos seguintes links: 
-    a. `http://localhost:8080/ap-web/primefaces-adminlte/`;
-    b. `http://localhost:8080/ap-web/primefaces-adminlte/index-primefaces.xhtml`;
+    1. `http://localhost:8080/ap-web/primefaces-adminlte/`;
+    2. `http://localhost:8080/ap-web/primefaces-adminlte/index-primefaces.xhtml`;
 
 ### Temas 
 O projeto toma como base o tema:

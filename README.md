@@ -17,7 +17,7 @@ Projeto conceito para implementar um theme primefaces com base no template [Admi
 ### Adquirir Proficiências em Habilidades
 
 1. Experiência em sistemas usando o framework JSF Primefaces (e.g. [Primefaces](https://www.primefaces.org/));
-    <p><img src="https://github.com/pssilva/primefaces-adminlte/blob/master/doc-repo/primetek_logo.png" alt="Experiência em sistemas usando o framework JSF Primefaces" height="50" width="195"></p>
+    <p><img src="https://github.com/pssilva/primefaces-adminlte/blob/master/doc-repo/primetek_logo.png" alt="Experiência em sistemas usando o framework JSF Primefaces" height="75" width="200"></p>
 2. Experiência em sistemas de containerização (e.g. [Docker](https://hub.docker.com/r/pss1suporte/paas-docker/));
     <p><img src="https://github.com/pssilva/primefaces-adminlte/blob/master/doc-repo/docker.png" alt="Experiência em sistemas de containerização Docker" height="50" width="195"></p>
 3. Experiência em sistemas Linux e shell scripting;

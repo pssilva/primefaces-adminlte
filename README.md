@@ -32,64 +32,61 @@ Considerando que temos uma instância do Amazon Machine Image - AMI iniciada: [a
 1. Clonar o projeto: `git clone https://github.com/pssilva/primefaces-adminlte.git`;
 2. Acessar a pasta: `cd primefaces-adminlte`;
 3. Instalar as dependências do AdminLTE: 
-    1. Acessar: `cd src/main/resources/META-INF/resources/primefaces-adminlte`;
-    2. composer: `composer install`;
-    3. Node: `npm install admin-lte --save`;
-    4. brew: `bower install admin-lte`;
-4. Maven:  `mvn clean package`;
+    a. Acessar: `cd src/main/resources/META-INF/resources/primefaces-adminlte`;
+    b. composer: `composer install`;
+    c. Node: `npm install admin-lte --save`;
+    d. brew: `bower install admin-lte`;
+4. Maven na pasta do projeto `primefaces-adminlte`:  `mvn clean package`;
 5. Install o theme no seu projeto:
-   1. adicionar a dependência POM:
+    a. adicionar a dependência POM:
      
 ```
-
-     <dependency>
-		<groupId>br.com.primefaces.adminlte</groupId>
-		<artifactId>primefaces-adminlte</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
-	 </dependency>
+<dependency>
+	<groupId>br.com.primefaces.adminlte</groupId>
+	<artifactId>primefaces-adminlte</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+ </dependency>
 	 
 ```	 
 	
-   2. adicionar o theme no seu WEB-INF/web.xml:
+   b. adicionar o theme no seu WEB-INF/web.xml:
    
 ```
-	
-	<context-param>
-		<param-name>primefaces.THEME</param-name>
-		<param-value>adminlte</param-value>
-	</context-param>
+<context-param>
+	<param-name>primefaces.THEME</param-name>
+	<param-value>adminlte</param-value>
+</context-param>
 	 
 ```	 
 
-   3. adicionar o CSS do template na usa página:
+   c. adicionar o CSS do template na usa página:
    
 ```
-	
-	<h:head>
-        <title>
-        	<ui:insert name="title"> 
-            	Sua Página JSF :: Usando o Thema AdminLTE
-        	</ui:insert>
-        </title>
-        <f:facet name="first">
-            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-            <meta http-equiv="pragma" content="no-cache"/>
-            <meta http-equiv="cache-control" content="no-cache"/>
-            <meta http-equiv="expires" content="0"/>
-        </f:facet>
-        
-        <link rel="stylesheet"  id="AdminLTE_CSS"
-			href="#{resource['primefaces-adminlte:dist/css/AdminLTE.css']}" 
-            type="text/css" media="all" />
-        <ui:insert name="head"/>
-        
-    </h:head>
+<h:head>
+    <title>
+    	<ui:insert name="title"> 
+        	Sua Página JSF :: Usando o Thema AdminLTE
+    	</ui:insert>
+    </title>
+    <f:facet name="first">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta http-equiv="pragma" content="no-cache"/>
+        <meta http-equiv="cache-control" content="no-cache"/>
+        <meta http-equiv="expires" content="0"/>
+    </f:facet>
+    
+    <link rel="stylesheet"  id="AdminLTE_CSS"
+		href="#{resource['primefaces-adminlte:dist/css/AdminLTE.css']}" 
+        type="text/css" media="all" />
+    <ui:insert name="head"/>
+    
+</h:head>
 	 
 ```	 
 
 6. acessar alguns dos seguintes links: 
-    1. `http://localhost:8080/ap-web/primefaces-adminlte/`;
-    2. `http://localhost:8080/ap-web/primefaces-adminlte/index-primefaces.xhtml`;
+    a. `http://localhost:8080/ap-web/primefaces-adminlte/`;
+    b. `http://localhost:8080/ap-web/primefaces-adminlte/index-primefaces.xhtml`;
 
 ### Temas 
 O projeto toma como base o tema:

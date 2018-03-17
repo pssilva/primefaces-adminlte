@@ -16,13 +16,15 @@ Projeto conceito para implementar um theme primefaces com base no template [Admi
 
 ### Adquirir Proficiências em Habilidades
 
-1. Experiência em sistemas de containerização (e.g. [Docker](https://hub.docker.com/r/pss1suporte/paas-docker/));
+1. Experiência em sistemas usando o framework JSF Primefaces (e.g. [Primefaces](https://www.primefaces.org/));
+    <p><img src="https://github.com/pssilva/primefaces-adminlte/blob/master/doc-repo/primetek_logo.png" alt="Experiência em sistemas usando o framework JSF Primefaces" height="50" width="195"></p>
+2. Experiência em sistemas de containerização (e.g. [Docker](https://hub.docker.com/r/pss1suporte/paas-docker/));
     <p><img src="https://github.com/pssilva/primefaces-adminlte/blob/master/doc-repo/docker.png" alt="Experiência em sistemas de containerização Docker" height="50" width="195"></p>
-2. Experiência em sistemas Linux e shell scripting;
+3. Experiência em sistemas Linux e shell scripting;
     <p><img src="https://github.com/pssilva/primefaces-adminlte/blob/master/doc-repo/shell-linux.jpeg" alt="Experiência em sistemas Linux e shell scripting" height="91" width="150"></p>
-3. Experiência em sistemas Amazon Web Services - AWS;
+4. Experiência em sistemas Amazon Web Services - AWS;
     <p><img src="https://github.com/pssilva/primefaces-adminlte/blob/master/doc-repo/aws.png" alt="Experiência em sistemas Amazon Web Services - AWS" height="50" width="195"></p>
-4. Experiência em projetos utilizando micro serviços (Microservices) e computação distribuída;
+5. Experiência em projetos utilizando micro serviços (Microservices) e computação distribuída;
 
 ![Microservices](https://github.com/pssilva/primefaces-adminlte/blob/master/doc-repo/microservices-domain.png)
 

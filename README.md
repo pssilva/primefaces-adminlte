@@ -86,8 +86,8 @@ Considerando que temos uma instância do Amazon Machine Image - AMI iniciada: [a
 	```	 
 
 6. acessar alguns dos seguintes links: 
-    1. `http://localhost:8080/ap-web/primefaces-adminlte/`;
-    2. `http://localhost:8080/ap-web/primefaces-adminlte/index-primefaces.xhtml`;
+    1. `http://localhost:8080/[SEU_PROJETO_WAR]/primefaces-adminlte/`;
+    2. `http://localhost:8080/[SEU_PROJETO_WAR]/primefaces-adminlte/index-primefaces.xhtml`;
 
 ### Temas 
 O projeto toma como base o tema:

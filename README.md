@@ -93,7 +93,7 @@ Considerando que temos uma instância do Amazon Machine Image - AMI iniciada: [a
 O projeto toma como base o tema:
 
 1. [AdminLTE](https://github.com/almasaeed2010/AdminLTE); <br />
->AdminLTE: `http://localhost:8080/ap-web/primefaces-adminlte/`
+>AdminLTE: `http://localhost:8080/[SEU_PROJETO_WAR]/primefaces-adminlte/`
 
 !["AdminLTE Presentation"](https://almsaeedstudio.com/AdminLTE2.png "AdminLTE Presentation")
 
